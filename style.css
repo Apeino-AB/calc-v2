@@ -16,23 +16,82 @@
 .calculator {
     width: 300px;
     height: 450px;
-    background-color: #c0fffb;
+    background-color: #131a19;
     display: block;
     margin: auto;
     margin-top: 50px;
     border-radius: 15px;
-    position: relative;
+    padding: 10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 4px 4px 4px #4f4f4f;
 }
+
 .calculator__display{
-    position: absolute;
-    background-color: rgb(90, 89, 89);
     height: 100px;
-    width: 280px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+.calculator__display p {
+    text-align: right;
+    font-size: 65px;
+    margin: 0;
+    color: white;
+}
+
+.calculator__buttons {
+    display: grid;
+    grid-template-areas:
+    "button_c button_percent button_del button_division"
+    "button_seven button_eigth button_nine button_myltiply"
+    "calculator__four calculator__five calculator__six button_minus"
+    "calculator__one calculator__two calculator__tree button_plus"
+    "button_zero button_zero button_dot button_equal";
+    grid-gap: 7px;
+    justify-items: center;
+}
+
+.calculator__button {
+    width: 50px;
+    height: 50px;
+    background: rgb(178, 225, 236);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size:  1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.calculator__button:hover {
+    filter:brightness(120%);
+}
+
+.calculator__button:active {
+    filter:brightness(80%);
+    -webkit-filter:brightness(80%);
+}
+
+.calculator__button.calculator__button_grey {
+    background: #a6a6a6;
+}
+
+.calculator__button.calculator__button_orange {
+    background-color: orange;
+}
+
+.calculator__button.calculator__button_zero {
+    grid-area: button_zero;
+    width: 100%;
+    border-radius: 34px;
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    -ms-border-radius: 34px;
+    -o-border-radius: 34px;
 }
