@@ -29,8 +29,62 @@
     box-shadow: 4px 4px 4px #4f4f4f;
 }
 
+.menu {
+    height: 20px;
+    width: 270px;
+    display: grid;
+    justify-items: end;
+}
+
+.menu_button {
+    height: 15px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu__popup {
+    position: relative;
+    right: 0;
+    padding: 5px;
+    background-color: #131a19;
+    border: 1px solid #fff;
+    z-index: 999;
+    border-radius:  10px;
+    -webkit-border-radius:  10px;
+    -moz-border-radius:  10px;
+    -ms-border-radius:  10px;
+    -o-border-radius:  10px;
+    margin-top: 10px;
+    margin-right: -15px;
+}
+
+.menu__popup-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__popup-list li{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.menu__popup-list a {
+    display: block;
+    padding: 5px;
+    color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu__popup-list a:hover {
+    background-color: #f2f2f2;
+}
+
 .calculator__display{
-    height: 100px;
+    height: 85px;
     padding: 10px;
     display: grid;
     justify-items: end;
@@ -42,7 +96,19 @@
     text-align: right;
     font-size: 65px;
     margin: 0;
-    color: white;
+    color: #fff;
+}
+
+.calculator__buttons {
+    display: grid;
+    grid-template-areas:
+    "button_c button_percent button_del button_division"
+    "button_seven button_eigth button_nine button_myltiply"
+    "calculator__four calculator__five calculator__six button_minus"
+    "calculator__one calculator__two calculator__tree button_plus"
+    "button_zero button_zero button_dot button_equal";
+    grid-gap: 7px;
+    justify-items: center;
 }
 
 .calculator__buttons {
@@ -60,22 +126,22 @@
 .calculator__button {
     width: 50px;
     height: 50px;
-    background: rgb(178, 225, 236);
+    background: #b2e1ec;
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
-    font-size:  1.5rem;
+    font-size: 1.5rem;
     cursor: pointer;
     user-select: none;
 }
 
 .calculator__button:hover {
-    filter:brightness(120%);
+    filter: brightness(120%);
 }
 
 .calculator__button:active {
-    filter:brightness(80%);
-    -webkit-filter:brightness(80%);
+    filter: brightness(80%);
+    -webkit-filter: brightness(80%);
 }
 
 .calculator__button.calculator__button_grey {
@@ -95,3 +161,4 @@
     -ms-border-radius: 34px;
     -o-border-radius: 34px;
 }
+

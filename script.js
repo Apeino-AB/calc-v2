@@ -18,6 +18,28 @@ function clearAll() {
 function log() {
   console.log(numberA, numberB, sign);
 }
+
+function showPopup() {
+  let popup = document.querySelector(".menu__popup");
+  if (popup.style.display  === "block") {
+    popup.style.display = "none";
+    return
+  }
+  popup.style.display = "block";
+}
+
+function hidePopup() {
+  let popup = document.querySelector(".menu__popup");
+  popup.style.display = "none";
+}
+
+document.addEventListener("click", function(event) {
+  if (!event.target.closest(".menu__popup") && !event.target.closest(".menu_button")) {
+    hidePopup();
+  }
+});
+
+
 console.log("test1");
 document.querySelector('.calculator__button_c').onclick = clearAll;
 console.log("test2");

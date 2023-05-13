@@ -10,8 +10,16 @@
 <body>
 <body>
     <div class="calculator">
+      <footer class="menu">
+        <button class="menu_button" onclick="showPopup()"> &#8942;</button>
+        <list class="menu__popup style="display:none">
+        <ul class="menu__popup-list">
+          <li><a href="#" >change theme</a></li>
+          <li><a href="#">history</a></li>
+        </ul></list>
+      </footer>
       <display class="calculator__display">
-        <p>0</p>
+        <p>0   </p>
       </display>
       <section  class="calculator__buttons">
         <button  class="calculator__button calculator__button_c calculator__button_grey">С</button>
