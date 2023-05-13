@@ -19,6 +19,10 @@ function log() {
   console.log(numberA, numberB, sign);
 }
 
+function maxElem () {
+  console.log("max element 8");
+  return "Error"
+}
 function showPopup() {
   let popup = document.querySelector(".menu__popup");
   if (popup.style.display  === "block") {
@@ -53,6 +57,10 @@ document.querySelector(".calculator__buttons").onclick = (event) => {
     if(digit.includes(key)) {
         if (numberB === '' && sign === "") {
         numberA+=key;
+        if(numberA.length > 8) {
+          out.textContent = maxElem();
+          return;
+        }
         out.textContent = numberA;
         } else if(numberA !== '' && numberB !== '' && endProgram) {
             numberB = key;
@@ -60,6 +68,10 @@ document.querySelector(".calculator__buttons").onclick = (event) => {
             out.textContent = numberB;
         } else {
             numberB +=key;
+            if(numberB.length > 8) {
+              out.textContent = maxElem();
+              return;
+            }
             out.textContent = numberB;
         }
         log();
